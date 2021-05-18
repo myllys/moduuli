@@ -50,5 +50,5 @@ dpkg_steam_question:
 xterm:
   pkg.installed
 
-steam:
+steam:i386:
   cmd.run
