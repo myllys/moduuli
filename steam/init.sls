@@ -29,7 +29,7 @@ apt-get install -y libgl1-mesa-glx:i386:
 
 apt-get install -y steam-launcher:
   cmd.run
-
+# steam lisenssin ehtojen hyväksyminen
 dpkg_steam_license:
   cmd.run:
    - unless: which steam
