@@ -1,20 +1,25 @@
+# steam.gpg key
 /etc/apt/trusted.gpg.d/steam.gpg:
   file.managed:
     - source: salt://steam/steam.gpg
-
+    
+# steam.list for install
 /etc/apt/sources.list.d/steam.list:
   file.managed:
     - source: salt://steam/steam.list
 
+# need support for 32-bit
 sudo dpkg --add-architecture i386:
   cmd.run
 
+# update before installing steam
 apt-get update:
   cmd.run
 
 apt-get install:
   cmd.run
 
+# suggested libraries from repo.steampowered
 apt-get install -y libgl1-mesa-dri:amd64:
   cmd.run
 
