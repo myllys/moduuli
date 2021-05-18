@@ -51,7 +51,7 @@ dpkg_steam_question:
     - require_in:
       - pkg: steam
 
-# If xterm not installed, launching steam will not work and will give error line 42: xterm command not found
+# If xterm not installed, launching steam will not work on some distros and will give error line 42: xterm command not found
 xterm:
   pkg.installed
 
