@@ -51,4 +51,4 @@ xterm:
   pkg.installed
 
 steam:i386:
-  cmd.run
+  pkg.installed
